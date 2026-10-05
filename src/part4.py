@@ -1,6 +1,11 @@
 # Part IV - Dictionaries & Advanced Iteration
 
 def create_dict(keys, values):
+    dict_return = {}
+    for i in range(len(keys)):
+        dict_return[f"{keys[i]}"] = values[i]
+
+    return dict_return
     """
     Create a dictionary from parallel lists of keys and values.
 
@@ -14,6 +19,9 @@ def create_dict(keys, values):
     pass
 
 def get_value(dct, key):
+
+    return dct.get(key)
+
     """
     Retrieve a value from a dictionary by key.
 
@@ -27,6 +35,10 @@ def get_value(dct, key):
     pass
 
 def set_value(dct, key, value):
+
+    dct[key] = value
+    return dct
+
     """
     Add or update a key-value pair in a dictionary.
 
@@ -41,6 +53,12 @@ def set_value(dct, key, value):
     pass
 
 def has_key(dct, key):
+    keys = dct.keys()
+    if key in keys:
+        return True
+    else:
+        return False
+
     """
     Check if a key exists in a dictionary.
 
@@ -54,6 +72,10 @@ def has_key(dct, key):
     pass
 
 def get_keys(dct):
+    if dct:
+        return dct.keys()
+    else:
+        return []
     """
     Get all keys from a dictionary.
 
@@ -66,6 +88,10 @@ def get_keys(dct):
     pass
 
 def get_values(dct):
+    if dct:
+        return list(dct.values())
+    else:
+        return []
     """
     Get all values from a dictionary.
 
@@ -78,6 +104,7 @@ def get_values(dct):
     pass
 
 def count_keys(dct):
+    return len(dct.keys())
     """
     Count the number of key-value pairs in a dictionary.
 
@@ -90,6 +117,10 @@ def count_keys(dct):
     pass
 
 def remove_key(dct, key):
+    keys = dct.keys()
+    if key in keys:
+        dct.pop(key)
+    return dct
     """
     Remove a key-value pair from a dictionary.
 
@@ -103,6 +134,11 @@ def remove_key(dct, key):
     pass
 
 def iterate_list(lst, callback):
+
+    for i in range(len(lst)):
+        lst[i] = callback(lst[i])
+    return lst
+
     """
     Apply a callback function to each element of a list.
 
@@ -116,6 +152,12 @@ def iterate_list(lst, callback):
     pass
 
 def find_item(lst, predicate):
+
+    for i in lst:
+        if predicate(i):
+            return i
+    return None
+
     """
     Find the first item in a list that matches a condition.
 
