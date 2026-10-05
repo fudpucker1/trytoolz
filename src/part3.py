@@ -93,7 +93,12 @@ def append_item(lst, item):
     pass
 
 def remove_item(lst, item):
+    for i in range(len(lst)):
+        if lst[i] == item:
+            del lst[i]
+            break
 
+    return lst
     """
     Remove the first occurrence of an item from a list.
 
@@ -107,6 +112,14 @@ def remove_item(lst, item):
     pass
 
 def count_item(lst, item):
+
+    count = 0
+    for i in range(len(lst)):
+        if lst[i] == item:
+            count += 1
+
+    return count
+
     """
     Count occurrences of an item in a list.
 
@@ -120,6 +133,7 @@ def count_item(lst, item):
     pass
 
 def reverse_sequence(sequence):
+    return sequence[::-1]
     """
     Reverse a list or string.
 
@@ -132,6 +146,7 @@ def reverse_sequence(sequence):
     pass
 
 def join_items(lst, separator):
+    return f"{separator}".join(lst)
     """
     Combine list items into a single string using a separator.
 
