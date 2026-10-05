@@ -2,6 +2,8 @@
 # Part III - Lists & Strings
 
 def length(sequence):
+    return len(sequence)
+
     """
     Get the length of a list or string.
 
@@ -14,6 +16,10 @@ def length(sequence):
     pass
 
 def get_first(sequence):
+    if len(sequence):
+        return sequence[0]
+    else:
+        return 0
     """
     Retrieve the first element of a list or string.
 
@@ -26,6 +32,10 @@ def get_first(sequence):
     pass
 
 def get_last(sequence):
+    if len(sequence):
+        return sequence[-1]
+    else:
+        return 0
     """
     Retrieve the last element of a list or string.
 
@@ -38,6 +48,8 @@ def get_last(sequence):
     pass
 
 def get_at_index(sequence, index):
+
+    return sequence[index]
     """
     Retrieve an element by index.
 
@@ -51,6 +63,7 @@ def get_at_index(sequence, index):
     pass
 
 def get_slice(sequence, start, end):
+    return sequence[start:end]
     """
     Extract a subsequence from start (inclusive) to end (exclusive).
 
@@ -65,6 +78,8 @@ def get_slice(sequence, start, end):
     pass
 
 def append_item(lst, item):
+    lst.append(item)
+    return lst
     """
     Add an item to the end of a list.
 
@@ -78,6 +93,7 @@ def append_item(lst, item):
     pass
 
 def remove_item(lst, item):
+
     """
     Remove the first occurrence of an item from a list.
 

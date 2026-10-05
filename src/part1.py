@@ -3,6 +3,8 @@
 
 
 def data_type(value):
+
+    return type(value).__name__
     """
     Returns the data type of the input argument.
 
@@ -15,6 +17,8 @@ def data_type(value):
     pass
 
 def add(a, b):
+
+    return a + b
     """
     Returns the sum of two input arguments.
 
@@ -28,6 +32,8 @@ def add(a, b):
     pass
 
 def subtract(a, b):
+
+    return a - b
     """
     Returns the difference of two input arguments.
 
@@ -41,6 +47,7 @@ def subtract(a, b):
     pass
 
 def multiply(a, b):
+    return a * b
     """
     Returns the product of two input arguments.
 
@@ -54,6 +61,8 @@ def multiply(a, b):
     pass
 
 def divide(a, b):
+
+    return a / b
     """
     Returns the result of dividing the first input argument by the second input argument.
 
@@ -67,6 +76,7 @@ def divide(a, b):
     pass
 
 def floor_divide(a, b):
+    return a // b
     """
     Returns the result of floor division of the first input argument by the second input argument.
 
@@ -81,6 +91,7 @@ def floor_divide(a, b):
 
 
 def get_remainder(a, b):
+    return a % b
     """
     Returns the remainder of dividing the first input argument by the second input argument.
 
@@ -94,6 +105,7 @@ def get_remainder(a, b):
     pass
 
 def increment(a):
+    return a + 1
     """
     Returns the incremented value of the input argument.
 
@@ -106,6 +118,7 @@ def increment(a):
     pass
 
 def decrement(a):
+    return a - 1
     """
     Returns the decremented value of the input argument.
 
@@ -118,6 +131,7 @@ def decrement(a):
     pass
 
 def exponent(a, b):
+    return a ** b
     """
     Returns the result of raising the first input argument to the power of the second input argument.
 

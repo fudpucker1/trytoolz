@@ -2,6 +2,9 @@
 # Part II - Comparisons
 
 def is_equal(a, b):
+    if a == b: return True
+    else:
+        return False
     """
     Check if two values are equal.
 
@@ -15,6 +18,9 @@ def is_equal(a, b):
     pass
 
 def greater_than(a, b):
+    if a > b: return True
+    else:
+        return False
     """
     Check if a is greater than b.
 
@@ -28,6 +34,9 @@ def greater_than(a, b):
     pass
 
 def less_than(a, b):
+    if a < b: return True
+    else:
+        return False
     """
     Check if a is less than b.
 
@@ -41,6 +50,9 @@ def less_than(a, b):
     pass
 
 def greater_than_or_equal_to(a, b):
+    if a >= b: return True
+    else:
+        return False
     """
     Check if a is greater than or equal to b.
 
@@ -54,6 +66,9 @@ def greater_than_or_equal_to(a, b):
     pass
 
 def less_than_or_equal_to(a, b):
+    if a <= b: return True
+    else:
+        return False
     """
     Check if a is less than or equal to b.
 
@@ -67,6 +82,9 @@ def less_than_or_equal_to(a, b):
     pass
 
 def falsy_or_truthy(value):
+    if value: return "truthy"
+    else: return "falsy"
+
     """
     Check if a value is falsy or truthy.
 
@@ -79,6 +97,8 @@ def falsy_or_truthy(value):
     pass
 
 def both(a, b):
+    if a and b: return True
+    else: return False
     """
     Check if both a and b are truthy.
 
@@ -92,6 +112,8 @@ def both(a, b):
     pass
 
 def either(a, b):
+    if a or b: return True
+    else: return False
     """
     Check if either a or b is truthy.
 
